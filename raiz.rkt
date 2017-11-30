@@ -1,9 +1,9 @@
 #lang racket
 
 (define (raiz numero pureza)
-  ((lambda (x y)
-     (if (= y 0)
-         (/ numero 2.0)
-         (/ (+ (raiz numero (- y 1)) (/ numero (raiz numero (- y 1)))) 2)))numero pureza)) 
+  (let fun((x numero) (y pureza) (z (/ numero 2.0)))
+  (if (zero? y)
+      z
+      (fun numero (- y 1) (/ (+ z (/ numero z)) 2.0)))))
 
-(raiz 5 3)
+(raiz 5 100)
