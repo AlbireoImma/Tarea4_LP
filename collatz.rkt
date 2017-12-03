@@ -1,5 +1,14 @@
 #lang racket
 
+#|
+Funcion: colltz
+Descripcion: calcula el valor maximo que alcanza el numero al plaicarle collatz
+Parametros:
+n numero
+max numero
+Retorno: entero con el maximo valor de la funcion
+|#
+
 (define (colltz n max)
   (cond ((= n 1) max)
         ((even? n) (if (> max (/ n 2))
@@ -11,6 +20,13 @@
         )
   )
 
+#|
+Funcion: collatz
+Descripcion: Calcula los valores maximos de cada elemento de la lista al aplicar collatz a cada uno
+Parametros:
+lista lista
+Retorno: lista con los valores maximos al aplicar collatz
+|#
 
 (define (collatz lista)
   (let ((aux (list)))

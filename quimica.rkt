@@ -1,5 +1,7 @@
 #lang racket
 
+
+
 (define elementos (list "escandio" "titanio" "vanadio" "cromo" "manganeso" 
                         "hierro" "cobalto" "niquel" "cobre" "zinc" "itrio" 
                         "circonio" "niobio" "molibdeno" "tecnecio" "rutenio" 
@@ -7,6 +9,14 @@
                         "wolframio" "renio" "osmio" "iridio" "platino" "oro"
                         "mercurio" "rutherfordio" "dubnio" "seaborgio" "bohrio"
                         "hasio" "meitnerio" "darmstatio" "roentgenio" "copernicio"))
+
+#|
+Funcion: quimica
+Descripcion: genera la lista secuenciada con la penultima letra del elemento dado
+Parametros:
+quimica string
+Retorno: Lista con los elementos en secuencia
+|#
 
 (define (quimica elemento)
   (let rec((x elemento) (ls elementos) (ls2 (list elemento)) (ls3 (list elemento)))
